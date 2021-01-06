@@ -1,4 +1,5 @@
 from Layer import Layer
+from Layer import try_
 
 
 # menu
@@ -25,9 +26,10 @@ def validate_rows_and_cols(rows_temp, cols_temp):
 def main():
     main_menu()
     print("Please enter ROWS")
-    rows = int(input("Rows: "))
+    rows, cols = 0, 0
+    rows = try_("ROWS: ")
     print("Please enter COLS")
-    cols = int(input("Cols: "))
+    cols = try_("COLS: ")
     while not validate_rows_and_cols(rows, cols):
         print("INVALID ROWS and COLS")
         print("Please enter greater than zero, even and not exceeding 100 numbers for ROWS and COLS")
