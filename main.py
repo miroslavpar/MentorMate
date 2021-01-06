@@ -38,7 +38,7 @@ def main():
     first_layer = Layer(rows, cols)
     second_layer = Layer(rows, cols)
     first_layer.filling_in()
-    if second_layer.solution(first_layer, 0, 0, 0, 0) == 0:
+    if second_layer.solution(first_layer, second_layer, 0, 0, 0, 0) == 0:
         print("\nThe SECOND wall should look like so:")
         second_layer.print()
     else:
